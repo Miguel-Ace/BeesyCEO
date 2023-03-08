@@ -50,7 +50,7 @@
                     <a href="" style="cursor: unset">Hola: <span>{{auth()->user()->username}}</span></a>
                     <form action="{{route('logout')}}" method="post">
                         @csrf
-                        <button class="submit" style="background: none; color: white; border: none; font-size: 1rem; font-weight: bolder; cursor: pointer;">Cerrar Sesión</button>
+                        <button class="submit" style="background: none; color: white; border: none; font-size: 1.8rem; font-weight: bolder; cursor: pointer;">Cerrar Sesión</button>
                     </form>
                 </nav>
             @endauth

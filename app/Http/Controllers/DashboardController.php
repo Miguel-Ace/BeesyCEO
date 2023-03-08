@@ -55,6 +55,10 @@ class DashboardController extends Controller
                     $data11['data'][] = $balanceDiario->monto_total;
                 }
             }
+            if (empty($data11)) {
+                $data11 = 0;
+            }else {
+            }
             $data['data11'] = json_encode($data11);
 
         // ==============Engresos Diario===============
@@ -64,6 +68,10 @@ class DashboardController extends Controller
                     $data10['label'][] = $devolucionesDiaria->fecha;
                     $data10['data'][] = $devolucionesDiaria->monto_total;
                 }
+            }
+            if (empty($data10)) {
+                $data10 = 0;
+            }else {
             }
             $data['data10'] = json_encode($data10);
 
@@ -75,6 +83,10 @@ class DashboardController extends Controller
                     $data9['data'][] = $cotizacionesDiaria->monto_total;
                 }
             }
+            if (empty($data9)) {
+                $data9 = 0;
+            }else {
+            }
             $data['data9'] = json_encode($data9);
 
         // ==============Engresos Diario===============
@@ -84,6 +96,10 @@ class DashboardController extends Controller
                     $data8['label'][] = $egresosDiario->fecha;
                     $data8['data'][] = $egresosDiario->monto_total;
                 }
+            }
+            if (empty($data8)) {
+                $data8 = 0;
+            }else {
             }
             $data['data8'] = json_encode($data8);
 
@@ -95,6 +111,10 @@ class DashboardController extends Controller
                     $data7['data'][] = $ingresosPendienteApartadoDiario->monto_total;
                 }
             }
+            if (empty($data7)) {
+                $data7 = 0;
+            }else {
+            }
             $data['data7'] = json_encode($data7);
 
         // ==============Recibos Diario===============
@@ -104,6 +124,10 @@ class DashboardController extends Controller
                     $data6['label'][] = $recibosDiario->fecha;
                     $data6['data'][] = $recibosDiario->monto_total;
                 }
+            }
+            if (empty($data6)) {
+                $data6 = 0;
+            }else {
             }
             $data['data6'] = json_encode($data6);
 
@@ -115,6 +139,10 @@ class DashboardController extends Controller
                     $data5['data'][] = $ingresosExtraordinarioDiario->monto_total;
                 }
             }
+            if (empty($data5)) {
+                $data5 = 0;
+            }else {
+            }
             $data['data5'] = json_encode($data5);
 
         // ==============Ingresos Caja Diario===============
@@ -124,6 +152,10 @@ class DashboardController extends Controller
                 $data4['label'][] = $ingresosCajaDiario->fecha;
                 $data4['data'][] = $ingresosCajaDiario->monto_total;
             }
+        }
+        if (empty($data4)) {
+            $data4 = 0;
+        }else {
         }
         $data['data4'] = json_encode($data4);
 
@@ -135,6 +167,10 @@ class DashboardController extends Controller
                 $data2['data'][] = $ingresosBancoDiario->monto_total;
             }
         }
+        if (empty($data2)) {
+            $data2 = 0;
+        }else {
+        }
         $data['data2'] = json_encode($data2);
 
         // ==============Ventas Diario===============
@@ -144,6 +180,10 @@ class DashboardController extends Controller
                 $data1['label'][] = $ventasDiario->fecha;
                 $data1['data'][] = $ventasDiario->monto_total;
             }
+        }
+        if (empty($data1)) {
+            $data1 = 0;
+        }else {
         }
         $data['data1'] = json_encode($data1);
 
@@ -155,7 +195,12 @@ class DashboardController extends Controller
                 $data3['data'][] = $apartadosDiario->monto_total;
             }
         }
+        if (empty($data3)) {
+            $data3 = 0;
+        }else {
+        }
         $data['data3'] = json_encode($data3);
+        
 
         // $chart_options = [
         //     'chart_title' => 'Ventas Diario',

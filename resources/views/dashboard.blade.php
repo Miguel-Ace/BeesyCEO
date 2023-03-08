@@ -8,7 +8,7 @@
 <section class="contenedorCanva">
     <div class="partesuperior">
 
-        <div class="datosunicos">
+        <div class="datosunicos uno">
             <p>Saldo Pendiente Clientes</p>
             <div>
                 <div class="logo">
@@ -27,7 +27,7 @@
             </div>
         </div>{{--Fin--}}
 
-        <div class="datosunicos">
+        <div class="datosunicos dos">
             <p>Saldo Pendiente Proveedores</p>
             <div>
                 <div class="logo">
@@ -46,7 +46,7 @@
             </div>
         </div>{{--Fin--}}
 
-        <div class="datosunicos">
+        <div class="datosunicos tres">
             <p>Total Costo Producto</p>
             <div>
                 <div class="logo">
@@ -65,7 +65,7 @@
             </div>
         </div>{{--Fin--}}
 
-        <div class="datosunicos">
+        <div class="datosunicos cuatro">
             <p>Total Apartados</p>
             <div>
                 <div class="logo">
@@ -97,6 +97,9 @@
         </div>
     </div>
 
+    {{-- <div class="parteinferiordos">
+    </div> --}}
+    
     <div class="parteinferiordos">
         <div class="grafos gtres">
             {{-- <p>Apartado Diario</p> --}}
@@ -106,14 +109,12 @@
             {{-- <p>Ingreso caja Diario</p> --}}
             <canvas id="myChart4"></canvas>
         </div>
-
+    
         <div class="grafos gcinco">
             {{-- <p>Ingreso Extraordinario Diario</p> --}}
             <canvas id="myChart5"></canvas>
         </div>
-    </div>
 
-    <div class="parteinferiordos">
         <div class="grafos gseis">
             {{-- <p>Apartado Diario</p> --}}
             <canvas id="myChart6"></canvas>
@@ -127,9 +128,7 @@
             {{-- <p>Ingreso Extraordinario Diario</p> --}}
             <canvas id="myChart8"></canvas>
         </div>
-    </div>
 
-    <div class="parteinferiordos">
         <div class="grafos gnueve">
             {{-- <p>Apartado Diario</p> --}}
             <canvas id="myChart9"></canvas>
@@ -138,12 +137,15 @@
             {{-- <p>Ingreso caja Diario</p> --}}
             <canvas id="myChart10"></canvas>
         </div>
-
+    
         <div class="grafos gonce">
             {{-- <p>Ingreso Extraordinario Diario</p> --}}
             <canvas id="myChart11"></canvas>
         </div>
     </div>
+
+    {{-- <div class="parteinferiordos">
+    </div> --}}
 
 </section>
 
@@ -228,7 +230,7 @@
             datasets: [{
             label: 'Ventas Diarias',
             data: cData.data,
-            borderWidth: 1
+            borderWidth: 1,
             }]
         },
         options: {
@@ -252,12 +254,12 @@
             label: 'Ingresos al Banco Diario',
             data: cData2.data,
             borderWidth: 1,
-            // backgroundColor: [
-            //     'rgb(236, 112, 99)',
-            //     'rgb(244, 208, 63)',
-            //     'rgb(41, 128, 185)',
-            //     'rgb(130, 224, 170)',
-            // ],
+            backgroundColor: [
+                'rgb(192, 57, 34)',
+                'rgb(244, 208, 63)',
+                'rgb(41, 128, 185)',
+                'rgb(0, 139, 140)',
+            ],
             }]
         },
         options: {
@@ -280,7 +282,13 @@
             datasets: [{
             label: 'Apartado Diarios',
             data: cData3.data,
-            borderWidth: 1
+            borderWidth: 1,
+            backgroundColor: [
+                'rgb(0, 139, 140)',
+                'rgb(192, 57, 34)',
+                'rgb(244, 208, 63)',
+                'rgb(41, 128, 185)',
+            ],
             }]
         },
         options: {
@@ -303,7 +311,13 @@
             datasets: [{
             label: 'Ingreso caja Diario',
             data: cData4.data,
-            borderWidth: 1
+            borderWidth: 1,
+            backgroundColor: [
+                'rgb(41, 128, 185)',
+                'rgb(244, 208, 63)',
+                'rgb(192, 57, 34)',
+                'rgb(0, 139, 140)',
+            ],
             }]
         },
         options: {
@@ -326,7 +340,14 @@
             datasets: [{
             label: 'Ingreso Extraordinario Diario',
             data: cData5.data,
-            borderWidth: 1
+            borderWidth: 1,
+            backgroundColor: [
+                'rgb(245, 183, 177)',
+                'rgb(244, 208, 63)',
+                'rgb(192, 57, 34)',
+                'rgb(0, 139, 140)',
+                'rgb(41, 128, 185)',
+            ],
             }]
         },
         options: {
@@ -349,7 +370,15 @@
             datasets: [{
             label: 'Recibo Diario',
             data: cData6.data,
-            borderWidth: 1
+            borderWidth: 1,
+            backgroundColor: [
+                'rgb(165, 105, 189)',
+                'rgb(245, 183, 177)',
+                'rgb(244, 208, 63)',
+                'rgb(192, 57, 34)',
+                'rgb(0, 139, 140)',
+                'rgb(41, 128, 185)',
+            ],
             }]
         },
         options: {
@@ -372,7 +401,17 @@
             datasets: [{
             label: 'Ingresos Pendiente Apartado Diario',
             data: cData7.data,
-            borderWidth: 1
+            borderWidth: 1,
+            backgroundColor: [
+                'rgb(52, 73, 94)',
+                'rgb(160, 64, 0)',
+                'rgb(165, 105, 189)',
+                'rgb(245, 183, 177)',
+                'rgb(244, 208, 63)',
+                'rgb(192, 57, 34)',
+                'rgb(0, 139, 140)',
+                'rgb(41, 128, 185)',
+            ],
             }]
         },
         options: {
@@ -395,7 +434,17 @@
             datasets: [{
             label: 'Egresos Diario',
             data: cData8.data,
-            borderWidth: 1
+            borderWidth: 1,
+            backgroundColor: [
+                'rgb(160, 64, 0)',
+                'rgb(52, 73, 94)',
+                'rgb(165, 105, 189)',
+                'rgb(245, 183, 177)',
+                'rgb(244, 208, 63)',
+                'rgb(192, 57, 34)',
+                'rgb(0, 139, 140)',
+                'rgb(41, 128, 185)',
+            ],
             }]
         },
         options: {
@@ -418,7 +467,17 @@
             datasets: [{
             label: 'Cotizaciones Diaro',
             data: cData9.data,
-            borderWidth: 1
+            borderWidth: 1,
+            backgroundColor: [
+                'rgb(52, 73, 94)',
+                'rgb(165, 105, 189)',
+                'rgb(160, 64, 0)',
+                'rgb(245, 183, 177)',
+                'rgb(244, 208, 63)',
+                'rgb(192, 57, 34)',
+                'rgb(0, 139, 140)',
+                'rgb(41, 128, 185)',
+            ],
             }]
         },
         options: {
@@ -441,7 +500,17 @@
             datasets: [{
             label: 'Devoluciones Diario',
             data: cData10.data,
-            borderWidth: 1
+            borderWidth: 1,
+            backgroundColor: [
+                'rgb(41, 128, 185)',
+                'rgb(245, 183, 177)',
+                'rgb(160, 64, 0)',
+                'rgb(52, 73, 94)',
+                'rgb(165, 105, 189)',
+                'rgb(244, 208, 63)',
+                'rgb(192, 57, 34)',
+                'rgb(0, 139, 140)',
+            ],
             }]
         },
         options: {
@@ -464,7 +533,17 @@
             datasets: [{
             label: 'Balance Diario',
             data: cData11.data,
-            borderWidth: 1
+            borderWidth: 1,
+            backgroundColor: [
+                'rgb(0, 139, 140)',
+                'rgb(160, 64, 0)',
+                'rgb(52, 73, 94)',
+                'rgb(165, 105, 189)',
+                'rgb(245, 183, 177)',
+                'rgb(244, 208, 63)',
+                'rgb(192, 57, 34)',
+                'rgb(41, 128, 185)',
+            ],
             }]
         },
         options: {
