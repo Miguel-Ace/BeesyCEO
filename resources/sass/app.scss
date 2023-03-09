@@ -55,6 +55,7 @@ h2{
 .informacionGeneral{
     // display: flex;
     // justify-content: space-between;
+    // overflow: scroll;
     display: grid;
         // grid-template-columns: 1fr;
         gap: 1.5rem;
@@ -71,6 +72,7 @@ h2{
         }
     margin-top: 1.5rem;
     .formulario2{
+        overflow: scroll;
         background-color: white;
         padding: .6rem;
         border-radius: .2rem;
@@ -80,7 +82,6 @@ h2{
         p{
             margin-top: 0;
         }
-
         table thead tr td{
             text-align: center;
             padding: 0 1rem 1rem 0;
@@ -99,6 +100,9 @@ h2{
             flex-direction: column;
             border-left: .6rem solid rgb(52, 73, 94);
             // justify-content: center;
+            table{
+                min-width: 350px;
+            }
         }
         &.dos{
             // flex: 0 0 calc(70%);
@@ -106,6 +110,9 @@ h2{
             flex-direction: column;
             border-left: .6rem solid rgb(52, 73, 94);
             // justify-content: center;
+            table{
+                min-width: 1200px;
+            }
         }
     }
 }

@@ -146,7 +146,6 @@
 
     {{-- <div class="parteinferiordos">
     </div> --}}
-
 </section>
 
     <div class="informacionGeneral">
